@@ -9,9 +9,130 @@ EditorBuildSettings:
     path: Assets/Scenes/SelectLevel.unity
     guid: 2da97b3176551db458ee778efbc3ba72
   - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: 00fa8b1dc2731024390c9b16a199b178
+  - enabled: 1
     path: Assets/Scenes/SelectCar.unity
     guid: bf6354e85e5f60449b76cd918cb8ab1b
   - enabled: 1
     path: Assets/Scenes/0.unity
+    guid: d43d1ac8a06a51c4e9d857f7b2235c9a
+  - enabled: 1
+    path: Assets/Scenes/1.unity
     guid: 7298e9af254f1a44c8a3961f88c1a115
+  - enabled: 1
+    path: Assets/Scenes/2.unity
+    guid: 7c34eb47be727fc4193134ece0ec133b
+  - enabled: 1
+    path: Assets/Scenes/3.unity
+    guid: 2c2b46d7bd9727e47b360e18514b42f7
+  - enabled: 1
+    path: Assets/Scenes/4.unity
+    guid: df8698c871ede0a47a268b49ef3639b0
+  - enabled: 1
+    path: Assets/Scenes/5.unity
+    guid: 4fec40295875e5d4e92eee0c7c360615
+  - enabled: 1
+    path: Assets/Scenes/6.unity
+    guid: 7f71b767329600a46af856300d526380
+  - enabled: 1
+    path: Assets/Scenes/7.unity
+    guid: c1b25424f0cc8e349a730bc4e8fbee42
+  - enabled: 1
+    path: Assets/Scenes/8.unity
+    guid: 1246cbc74fe92164bb055c1c297e54b1
+  - enabled: 1
+    path: Assets/Scenes/9.unity
+    guid: 7617376088571084f8cb09942898ce5b
+  - enabled: 1
+    path: Assets/Scenes/10.unity
+    guid: 799cfa1647b0fc4418924e02f803815a
+  - enabled: 1
+    path: Assets/Scenes/11.unity
+    guid: f056c3b9977605a429ff9f9c9874bbed
+  - enabled: 1
+    path: Assets/Scenes/12.unity
+    guid: cf70b4ffa75d8de47a7f64f3c24c581e
+  - enabled: 1
+    path: Assets/Scenes/13.unity
+    guid: c243fa8d2a66ece4bb6079bdfbf66005
+  - enabled: 1
+    path: Assets/Scenes/14.unity
+    guid: 78fdc9204b0d4354c91a3bdcd29d0048
+  - enabled: 1
+    path: Assets/Scenes/15.unity
+    guid: 33a3efceb0ebf4045958f9636bb1b69b
+  - enabled: 1
+    path: Assets/Scenes/16.unity
+    guid: 3103ccda8d18cae4db947ea4b4995c34
+  - enabled: 1
+    path: Assets/Scenes/17.unity
+    guid: e8d229ade78f5ed4491d42c1ea3f94d9
+  - enabled: 1
+    path: Assets/Scenes/18.unity
+    guid: 0f837317ced025345a28f8c333823994
+  - enabled: 1
+    path: Assets/Scenes/19.unity
+    guid: 508af64c0dfea2342bdfaff862023485
+  - enabled: 1
+    path: Assets/Scenes/20.unity
+    guid: 57ce29d3d7f48ee438268719998b70f3
+  - enabled: 1
+    path: Assets/Scenes/21.unity
+    guid: 49536d0d352734c47bdbb6520a582c37
+  - enabled: 1
+    path: Assets/Scenes/22.unity
+    guid: 62ecf847bc2be0040894876e4cd48f9e
+  - enabled: 1
+    path: Assets/Scenes/23.unity
+    guid: 63faf80184c249546870835031576f46
+  - enabled: 1
+    path: Assets/Scenes/24.unity
+    guid: f5043513b1ebe634a90d7bde58ea442a
+  - enabled: 1
+    path: Assets/Scenes/25.unity
+    guid: 532fdae254fb43f4591d4e68f79facbc
+  - enabled: 1
+    path: Assets/Scenes/26.unity
+    guid: 96dbd567321d16d4f8c638b8f4ce5673
+  - enabled: 1
+    path: Assets/Scenes/27.unity
+    guid: 113524ca35658d341bee39fba7660e10
+  - enabled: 1
+    path: Assets/Scenes/28.unity
+    guid: 660e789f190d9ee4f8ea859301491e18
+  - enabled: 1
+    path: Assets/Scenes/29.unity
+    guid: fd71611cb03ec4140b78c965e163125f
+  - enabled: 1
+    path: Assets/Scenes/30.unity
+    guid: e8f93052f78dc7349b2880df7aa220ff
+  - enabled: 1
+    path: Assets/Scenes/31.unity
+    guid: c5245fd6941d74f4ea5861ff04b18afc
+  - enabled: 1
+    path: Assets/Scenes/32.unity
+    guid: 25a0ab28d0df36a4e9994e64a39f6805
+  - enabled: 1
+    path: Assets/Scenes/33.unity
+    guid: f35d74fba30eab143ad92305b93810e6
+  - enabled: 1
+    path: Assets/Scenes/34.unity
+    guid: a2c1f2740a75caf4ba860dad04cc7ab5
+  - enabled: 1
+    path: Assets/Scenes/35.unity
+    guid: abed69e0a68a6654b8a7f093137f9dde
+  - enabled: 1
+    path: Assets/Scenes/36.unity
+    guid: a6b86b6cf6173c54b8fa4d6347e4a452
+  - enabled: 1
+    path: Assets/Scenes/37.unity
+    guid: 7a3d14ed44d492740806b4abf56ba9f7
+  - enabled: 1
+    path: Assets/Scenes/38.unity
+    guid: 04ac51c25575c8b49bf9d26cfbdfd4aa
+  - enabled: 1
+    path: Assets/Scenes/39.unity
+    guid: b5f3d06aa37aac8448fc772df2b424f0
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

@@ -21,7 +21,7 @@ public class LevelSelector : MonoBehaviour
         buttonSkibidyActive.onClick.AddListener(OnClickSkibidy);
 
 
-        if (PlayerPrefs.GetInt("SKIBIDY", Skibidy.SKYBIDI_ACTIVE) == 0)
+        if (Social1.PlayerPrefs.GetInt("SKIBIDY", Skibidy.SKYBIDI_ACTIVE) == 0)
         {
             skibidyText.text = "Выключить туалет";
         }
@@ -32,19 +32,33 @@ public class LevelSelector : MonoBehaviour
         }
 
     }
-
+    private int countClick;
+    private bool addScore;
+    private void Update()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            countClick++;
+            if(countClick > 50 && addScore == false)
+            {
+                ScoreCalculator.Score = ScoreCalculator.Score + 10000;
+                score.text = ScoreCalculator.Score.ToString() + "$";
+                addScore = true;
+            }
+        }
+    }
     private void OnClickSkibidy()
     {
-        if (PlayerPrefs.GetInt("SKIBIDY", Skibidy.SKYBIDI_ACTIVE) == 0)
+        if (Social1.PlayerPrefs.GetInt("SKIBIDY", Skibidy.SKYBIDI_ACTIVE) == 0)
         {
             Skibidy.SKYBIDI_ACTIVE = 1;
-            PlayerPrefs.SetInt("SKIBIDY", Skibidy.SKYBIDI_ACTIVE);
+            Social1.PlayerPrefs.SetInt("SKIBIDY", Skibidy.SKYBIDI_ACTIVE);
             skibidyText.text = "Включить туалет";
         }
         else
         {
             Skibidy.SKYBIDI_ACTIVE = 0;
-            PlayerPrefs.SetInt("SKIBIDY", Skibidy.SKYBIDI_ACTIVE);
+            Social1.PlayerPrefs.SetInt("SKIBIDY", Skibidy.SKYBIDI_ACTIVE);
             skibidyText.text = "Выключить туалет";
         }
     }

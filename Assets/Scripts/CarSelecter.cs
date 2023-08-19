@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class CarSelecter : MonoBehaviour
 {
     [SerializeField] private Button rightButton, leftButton, goButton;
+    [SerializeField] private Text GoText;
     [SerializeField] private List<MenuCar> mCars;
     public MenuCar currentCar;
     public static int CarIndex;
@@ -23,15 +24,19 @@ public class CarSelecter : MonoBehaviour
          
         RefreshButton();
         ShowCurrentCar();
-         
-        scene = SceneManager.LoadSceneAsync(LevelSelector.NameLevel);
+
+        scene = SceneManager.LoadSceneAsync("LoadingScene");
         scene.allowSceneActivation = false;
-       
+
     }
 
     private void LoadGame()
     {
+        GoText.text = "онднфдхре...";
+        rightButton.gameObject.SetActive(false); leftButton.gameObject.SetActive(false);
         scene.allowSceneActivation = true;
+      
+        //SceneManager.LoadScene (LevelSelector.NameLevel);
     }
 
     private void OnClickSelectCarButton(bool isRightButton)

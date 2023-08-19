@@ -13,9 +13,10 @@ public class UIService : MonoBehaviour
     {
         [SerializeField] private Canvas canvas;
         [SerializeField] private Button continueButton,menuButton;
-        [SerializeField] private Text score;
+        [SerializeField] private Text pauseScoreText;
         public void Init()
         {
+            canvas.gameObject.SetActive(false);
             continueButton.onClick.AddListener(() =>  ApplyPause(false));
             menuButton.onClick.AddListener(() =>
             {
@@ -29,7 +30,7 @@ public class UIService : MonoBehaviour
             if (active)
             {
                 Time.timeScale = 0.01f;
-                score.text = ScoreCalculator.Score.ToString() + "$"; ;
+                pauseScoreText.text = ScoreCalculator.Score.ToString() + "$"; ;
             }
             else
             {
@@ -44,23 +45,27 @@ public class UIService : MonoBehaviour
         [SerializeField] private GameObject  finishCanvas;
         [SerializeField] private GameObject controllerCanvas;
         [SerializeField] private Button menuButton;
-        [SerializeField] private Text scoreText;
+        [SerializeField] private Text finishScoreText;
 
         public void Init()
         {
-            menuButton.onClick.AddListener(() => SceneManager.LoadScene("SelectLevel"));
+            finishCanvas.gameObject.SetActive(false);
+            menuButton.onClick.AddListener(() => { SceneManager.LoadScene("SelectLevel");
+                if(Yandex.instance)
+            Yandex.instance.ShowAdvBetweenScenes();
+            });
         }
         public void ApplyFinish()
         {
             finishCanvas.gameObject.SetActive(true);
             controllerCanvas.gameObject.SetActive(false);
-            scoreText.text = ScoreCalculator.Score.ToString();
+            finishScoreText.text = ScoreCalculator.Score.ToString();
         }
     }
     [SerializeField] private FinishLevel finishLevel;
     [SerializeField] private PauseMode pauseMode;
     [SerializeField] private Button restartButton,pauseButton;
-    [SerializeField] private Text scoreText;
+    [SerializeField] private Text controllerScoreText;
     public Button RestartButton => restartButton;
  
     public void Init(LevelService levelService)
@@ -73,7 +78,7 @@ public class UIService : MonoBehaviour
     }
     public void UpdateScoreTable()
     {
-        scoreText.text = ScoreCalculator.Score.ToString() + "$";
+        controllerScoreText.text = ScoreCalculator.Score.ToString() + "$";
     }
     public void ApplyFinish()
     {

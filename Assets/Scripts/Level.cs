@@ -27,7 +27,7 @@ class Level : MonoBehaviour
 
     private void CheckStateLevel()
     {
-        openedLevel = PlayerPrefs.GetInt(nameLevel);
+        openedLevel = Social1.PlayerPrefs.GetInt(nameLevel);
 
         if (openedLevel == 1 || nameLevel == "0")
         {
@@ -78,7 +78,7 @@ class Level : MonoBehaviour
     {
         if (ScoreCalculator.Score >= cost)
         {
-            PlayerPrefs.SetInt(nameLevel, 1);
+            Social1.PlayerPrefs.SetInt(nameLevel, 1);
             state = StateLevel.open;
             ScoreCalculator.Score = ScoreCalculator.Score - cost;
         }

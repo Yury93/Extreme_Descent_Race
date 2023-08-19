@@ -6,11 +6,11 @@ public static class ScoreCalculator
     {
         get
         {
-            return PlayerPrefs.GetInt("Score");
+            return Social1.PlayerPrefs.GetInt("Score");
         }
         set
         {
-            PlayerPrefs.SetInt("Score", value);
+            Social1.PlayerPrefs.SetInt("Score", value);
         }
     }
 }

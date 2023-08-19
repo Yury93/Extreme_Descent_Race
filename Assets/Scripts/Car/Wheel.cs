@@ -1,4 +1,5 @@
 ﻿using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class Wheel
@@ -8,6 +9,7 @@ public class Wheel
     private Transform[] wheelTransforms;
     private int countWheelIsGround;
     public bool IsGround { get; private set; }
+   
     
     public Wheel(WheelCollider[] wheelColliders, Transform[] wheelTransforms)
     {
@@ -46,6 +48,7 @@ public class Wheel
             {
                 countWheelIsGround++;
             }
+
         }
         if (countWheelIsGround == 0)
         {
@@ -54,8 +57,15 @@ public class Wheel
         else
         {
             IsGround = false;
-        }
+        } 
     }
+    private float time;
+    public float GetRpm()
+    {
+        return wheelColliders[0].rpm;
+      
+    }
+
     public void BrakeTorque(float brakeForce)
     {
         if (brakeForce > 1)

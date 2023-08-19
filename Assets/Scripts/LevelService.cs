@@ -7,11 +7,13 @@ using VContainer;
 public class LevelService : MonoBehaviour
 {
     [SerializeField] private UIService uIService;
-    [SerializeField] private FinishTrigger[] finishes;
+    [SerializeField] private CheckPoint[] finishes;
     [SerializeField] private DeathTrigger deathTrigger;
     [SerializeField] private Transform startTransform;
     [SerializeField] private List<CarController> cars;
     [SerializeField] private Cinemachine.CinemachineVirtualCamera virtualCamera;
+    [SerializeField] private MobileController mobileController;
+    public MobileController MobileController => mobileController;
     private CarController currentCar;
     public bool StartRace { get; private set; }
     private void Start()
@@ -23,6 +25,7 @@ public class LevelService : MonoBehaviour
         }
         deathTrigger.onDeath += OnDeath;
         uIService.Init(this);
+        Time.timeScale = 1;
     }
     private void CarActivated(int indexCar, int time)
     {
