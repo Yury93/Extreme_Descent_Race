@@ -7,15 +7,19 @@ using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
-  
-   
+    public Text text;
+    
    private void Start()
     {
-      StartCoroutine( CorLoadScene());
+        if (Application.isMobilePlatform)
+        {
+            text.text = "Загрузка, пожалуйста подождите...(На мобильных устройствах она дольше, но игра того стоит!)";
+        }
+      StartCoroutine( CorLoadScene(LevelSelector.NameLevel));
     }
-    IEnumerator CorLoadScene()
+    IEnumerator CorLoadScene(string name)
     {
-        var scene = SceneManager.LoadSceneAsync(LevelSelector.NameLevel);
+        var scene = SceneManager.LoadSceneAsync(name);
         scene.allowSceneActivation = false;
 
        while (scene.progress > 90) 
@@ -23,6 +27,7 @@ public class SceneLoader : MonoBehaviour
         
             yield return null;
         }
-       scene.allowSceneActivation = true;
+        yield return new WaitForSeconds(1f);
+        scene.allowSceneActivation = true;
     }
 }

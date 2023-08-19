@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -6,6 +7,7 @@ using UnityEngine.UI;
 class Level : MonoBehaviour
 {
     public enum StateLevel { open,close }
+    [SerializeField] private Image backImage;
     [SerializeField] private string nameLevel;
     [SerializeField] private int cost;
     [SerializeField] StateLevel state;
@@ -70,8 +72,15 @@ class Level : MonoBehaviour
 
     private void LoadScene()
     {
-        LevelSelector.NameLevel = nameLevel;
-        SceneManager.LoadScene("SelectCar");
+        StartCoroutine(CorLoad());
+        IEnumerator CorLoad()
+        {
+            backImage.color = Color.green;
+            LevelSelector.NameLevel = nameLevel;
+            yield return null;
+            SceneManager.LoadScene("SelectCar");
+        }
+      
     }
 
     public void Buy()

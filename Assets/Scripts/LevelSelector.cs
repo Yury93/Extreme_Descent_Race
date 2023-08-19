@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class LevelSelector : MonoBehaviour
 {
+    [SerializeField] private RectTransform content;
+    [SerializeField] private ScrollRect scroll;
     [SerializeField] private Button buttonSkibidyActive;
     [SerializeField] private Text skibidyText;
     [SerializeField] private List<Level> levels;
@@ -30,6 +32,9 @@ public class LevelSelector : MonoBehaviour
             Skibidy.SKYBIDI_ACTIVE = 1;
             skibidyText.text = "Включить туалет";
         }
+       var contentPos = content.anchoredPosition.y;
+        scroll.normalizedPosition = new Vector2(0, 0);
+        content.anchoredPosition = new Vector2(content.anchoredPosition.x, contentPos);
 
     }
     private int countClick;

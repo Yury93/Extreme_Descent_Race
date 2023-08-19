@@ -59,7 +59,7 @@ public class UIService : MonoBehaviour
         {
             finishCanvas.gameObject.SetActive(true);
             controllerCanvas.gameObject.SetActive(false);
-            finishScoreText.text = ScoreCalculator.Score.ToString();
+            finishScoreText.text = ScoreCalculator.Score.ToString() + "$";
         }
     }
     [SerializeField] private FinishLevel finishLevel;
